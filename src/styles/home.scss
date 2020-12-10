@@ -1,0 +1,31 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+h1 {
+    color: red;
+    margin-left: 20px;
+}
+
+.people{
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    width: 3000px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+
+.planets{
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    width: 3000px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+
+body{
+  background: linear-gradient(to right, #000000, #434343); 
+}

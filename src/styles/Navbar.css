@@ -1,0 +1,15 @@
+.navbar-dark{
+  justify-content: space-around;
+   background-color: black;
+}
+
+.logo{
+    height:5%;
+    width: 5%;
+}
+
+
+
+.dropdown-menu{
+    background-color: red;
+}

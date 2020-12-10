@@ -1,0 +1,23 @@
+.text {
+    color: white;
+}
+
+.more-details{
+    margin-left: 2%;
+    color: tomato;
+
+}
+
+.detail{
+    margin-top: 20px;
+}
+
+
+.sep {
+    color:red;
+}
+
+.card-img-top{
+    height: 300px;
+    margin-left: 2%;
+}
