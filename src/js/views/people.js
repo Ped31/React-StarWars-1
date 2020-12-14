@@ -20,7 +20,7 @@ function People(props) {
 						/>
 					</div>
 					<div className="col-6 text">
-						<h1 className="title">{store.morePeople.name}</h1>
+						<h1 className="title">{store.moreDetail.name}</h1>
 						<p>
 							He recorrido esta galaxia de un extremo a otro, he visto cosas muy raras, pero nunca vi nada
 							que me impulsara a creer que haya una única fuerza poderosa que lo controla todo. Ningún
@@ -39,27 +39,27 @@ function People(props) {
 				<div className="row more-details">
 					<div className="col">
 						<p>Name</p>
-						<p>{store.morePeople.name}</p>
+						<p>{store.moreDetail.name}</p>
 					</div>
 					<div className="col">
 						<p>Birth Year</p>
-						<p>{store.morePeople.birth_year}</p>
+						<p>{store.moreDetail.birth_year}</p>
 					</div>
 					<div className="col">
 						<p>Gender</p>
-						<p>{store.morePeople.gender}</p>
+						<p>{store.moreDetail.gender}</p>
 					</div>
 					<div className="col">
 						<p>Height</p>
-						<p>{store.morePeople.height}</p>
+						<p>{store.moreDetail.height}</p>
 					</div>
 					<div className="col">
 						<p>Skin Color</p>
-						<p>{store.morePeople.skin_color}</p>
+						<p>{store.moreDetail.skin_color}</p>
 					</div>
 					<div className="col">
 						<p>Eye Color</p>
-						<p>{store.morePeople.eye_color}</p>
+						<p>{store.moreDetail.eye_color}</p>
 					</div>
 				</div>
 			</div>
