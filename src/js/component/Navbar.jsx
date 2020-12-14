@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 import "../../styles/Navbar.css";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,6 +10,7 @@ function Navbar() {
 	const openCloseDrop = () => {
 		setDropdown(!dropdown);
 	};
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="row navbar">
 			<nav className="navbar navbar-dark bg-black">
@@ -20,11 +22,28 @@ function Navbar() {
 				</Link>
 				<div className="dropdown">
 					<Dropdown isOpen={dropdown} toggle={openCloseDrop}>
-						<DropdownToggle caret className="dropdown-menu">
+						<DropdownToggle className="boton" caret>
 							Favorites
+							{store.favorites.length}
 						</DropdownToggle>
 						<DropdownMenu>
-							<DropdownItem>ITem 1</DropdownItem>
+							{store.favorites.length == 0 ? (
+								<DropdownItem>(empty)</DropdownItem>
+							) : (
+								store.favorites.map((favorite, key) => {
+									return (
+										<DropdownItem key={key}>
+											{favorite}
+											<i
+												className="fas fa-times"
+												onClick={() => {
+													actions.removeFav(favorite.id);
+												}}
+											/>
+										</DropdownItem>
+									);
+								})
+							)}
 						</DropdownMenu>
 					</Dropdown>
 				</div>

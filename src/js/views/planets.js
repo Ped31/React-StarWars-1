@@ -5,12 +5,8 @@ import PropTypes from "prop-types";
 import Navbar from "../component/Navbar.jsx";
 import "../../styles/detail.css";
 
-function Planet(planets) {
+function Planet(props) {
 	const { store, actions } = useContext(Context);
-	useEffect(() => {
-		actions.loadingData("planets");
-		actions.loadingData("people");
-	}, []);
 
 	return (
 		<div className="detail-planets">
@@ -24,7 +20,7 @@ function Planet(planets) {
 						/>
 					</div>
 					<div className="col-6 text">
-						<h1 className="title">{planets.name}</h1>
+						<h1 className="title">{store.moreDetail.name}</h1>
 						<p>
 							LA VENGANZA DEL SITH ¡Guerra! La República se derrumba bajo los ataques del despiadado Señor
 							Sith, el Conde Dooku. Hay héroes en ambos bandos. El mal está en todas partes. En una
@@ -42,27 +38,27 @@ function Planet(planets) {
 				<div className="row more-details">
 					<div className="col">
 						<p>Name</p>
-						<p>{planets.name}</p>
+						<p>{store.moreDetail.name}</p>
 					</div>
 					<div className="col">
 						<p>Climate</p>
-						<p>{planets.climate}</p>
+						<p>{store.moreDetail.climate}</p>
 					</div>
 					<div className="col">
 						<p>Population</p>
-						<p>{planets.population}</p>
+						<p>{store.moreDetail.population}</p>
 					</div>
 					<div className="col">
 						<p>Orbital Period</p>
-						<p>{planets.orbital_period}</p>
+						<p>{store.moreDetail.orbital_period}</p>
 					</div>
 					<div className="col">
 						<p>Rotation Period</p>
-						<p>{planets.rotation_period}</p>
+						<p>{store.moreDetail.rotation_period}</p>
 					</div>
 					<div className="col">
 						<p>Diameter</p>
-						<p>{planets.diameter}</p>
+						<p>{store.moreDetail.diameter}</p>
 					</div>
 				</div>
 			</div>

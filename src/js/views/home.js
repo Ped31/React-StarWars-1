@@ -24,6 +24,8 @@ function Home() {
 				<div className="container-fluid">
 					<div className="row people principal">
 						{store.people.map((people, index) => {
+							const id = index;
+							const str = "people";
 							return (
 								<PeopleCard
 									key={index}
@@ -34,6 +36,8 @@ function Home() {
 									text1={people.gender}
 									text2={people.eye_color}
 									text3={people.hair_color}
+									id={id}
+									str={str}
 								/>
 							);
 						})}
@@ -42,9 +46,11 @@ function Home() {
 			</div>
 			<div className="planets">
 				<h1>Planets</h1>
-				<div className-="container-flluid">
+				<div className="container-flluid">
 					<div className="row planets principal">
 						{store.planets.map((planets, index) => {
+							const id = index;
+							const str = "planets";
 							return (
 								<PlanetCard
 									key={index}
@@ -53,6 +59,8 @@ function Home() {
 									subtitle2={"Terrain: "}
 									text1={planets.population}
 									text2={planets.terrain}
+									id={id}
+									str={str}
 								/>
 							);
 						})}

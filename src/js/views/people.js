@@ -5,17 +5,13 @@ import PropTypes from "prop-types";
 import Navbar from "../component/Navbar.jsx";
 import "../../styles/detail.css";
 
-function People(people) {
+function People(props) {
 	const { store, actions } = useContext(Context);
-	useEffect(() => {
-		actions.loadingData("planets");
-		actions.loadingData("people");
-	}, []);
 
 	return (
 		<div className="detail-people">
 			<Navbar />
-			<div className="cointainer-fluid detail">
+			<div className="cointainer-fluid">
 				<div className="row">
 					<div className="col-6">
 						<img
@@ -23,8 +19,8 @@ function People(people) {
 							className="card-img-top"
 						/>
 					</div>
-					<div className="col-6 text ">
-						<h1 className="title">{people.name}</h1>
+					<div className="col-6 text">
+						<h1 className="title">{store.morePeople.name}</h1>
 						<p>
 							He recorrido esta galaxia de un extremo a otro, he visto cosas muy raras, pero nunca vi nada
 							que me impulsara a creer que haya una única fuerza poderosa que lo controla todo. Ningún
@@ -43,27 +39,27 @@ function People(people) {
 				<div className="row more-details">
 					<div className="col">
 						<p>Name</p>
-						<p>{people.name}</p>
+						<p>{store.morePeople.name}</p>
 					</div>
 					<div className="col">
 						<p>Birth Year</p>
-						<p>{people.birth_year}</p>
+						<p>{store.morePeople.birth_year}</p>
 					</div>
 					<div className="col">
 						<p>Gender</p>
-						<p>{people.gender}</p>
+						<p>{store.morePeople.gender}</p>
 					</div>
 					<div className="col">
 						<p>Height</p>
-						<p>{people.height}</p>
+						<p>{store.morePeople.height}</p>
 					</div>
 					<div className="col">
 						<p>Skin Color</p>
-						<p>{people.skin_color}</p>
+						<p>{store.morePeople.skin_color}</p>
 					</div>
 					<div className="col">
 						<p>Eye Color</p>
-						<p>{people.eye_color}</p>
+						<p>{store.morePeople.eye_color}</p>
 					</div>
 				</div>
 			</div>
