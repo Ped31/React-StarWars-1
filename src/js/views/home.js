@@ -18,7 +18,6 @@ function Home() {
 
 	return (
 		<div className="StarWarsApp">
-			<Navbar />
 			<div className="characters">
 				<h1>Characters</h1>
 				<div className="container-fluid">

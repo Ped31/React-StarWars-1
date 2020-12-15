@@ -20,7 +20,7 @@ function Navbar() {
 						className="logo"
 					/>
 				</Link>
-				<div className="dropdown">
+				<div className="dropdown justify-content-end">
 					<Dropdown isOpen={dropdown} toggle={openCloseDrop}>
 						<DropdownToggle className="boton" caret>
 							Favorites

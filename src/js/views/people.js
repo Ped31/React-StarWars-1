@@ -10,7 +10,6 @@ function People(props) {
 
 	return (
 		<div className="detail-people">
-			<Navbar />
 			<div className="cointainer-fluid">
 				<div className="row">
 					<div className="col-6">

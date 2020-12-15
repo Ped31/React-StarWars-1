@@ -4,13 +4,21 @@
  box-sizing: border-box;
 }
 h1 {
-    color: red;
+    color: tomato;
     margin-left: 20px;
 }
+/*
+.StarWarsApp{
+
+    overflow-x: auto; 
+    width: 3000px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}*/
 
 .people{
     flex-wrap: nowrap;
-    overflow-x: auto; 
+
     width: 3000px;
     margin-bottom: 2%;
     margin-top: 2%;
@@ -19,7 +27,7 @@ h1 {
 
 .planets{
     flex-wrap: nowrap;
-    overflow-x: auto; 
+  
     width: 3000px;
     margin-bottom: 2%;
     margin-top: 2%;

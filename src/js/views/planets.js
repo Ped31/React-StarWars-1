@@ -10,7 +10,6 @@ function Planet(props) {
 
 	return (
 		<div className="detail-planets">
-			<Navbar />
 			<div className="cointainer-fluid">
 				<div className="row">
 					<div className="col-6">

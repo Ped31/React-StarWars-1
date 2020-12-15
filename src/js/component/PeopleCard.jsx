@@ -29,7 +29,9 @@ function PeopleCard(props) {
 				</p>
 				<div className="row">
 					<Link to="/people">
-						<button className="btn1 btn-primary">Learn More!</button>
+						<button className="btn1 btn-primary" onClick={() => actions.moreDetails(props.str, props.id)}>
+							Learn More!
+						</button>
 					</Link>
 					<button
 						type="button"
